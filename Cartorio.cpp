@@ -2,6 +2,7 @@
 #include <stdlib.h> //Essa biblioteca de alocação de espaço em memória 
 #include <locale.h> //bibliote de alocação de texto po região
 #include <string.h> //Bibliote resposavel pelas strings
+#include <iostream>
 
 int registrar()
 {
@@ -129,6 +130,36 @@ int deletar()
   }
 }
 
+int sair()
+{
+	int opcao=0;
+	int laco=1;
+	
+	
+	setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
+	
+	printf("Você deseja sair do programa?\n\n");
+	printf("\t1 - Sim\n");
+	printf("\t2 - Não\n\n");
+	printf("Opção:  ");
+	
+	scanf("%d", &opcao);
+	
+	if(opcao == 1)
+	{
+		system("cls");
+		printf("Obrigado por uutilizar o sistema!\n");
+		exit(0); // Encerra o programa com código de saída 0
+    	return 0; // Não será executado
+    	system("pause");
+	}
+	
+	else; 
+	{
+		int main();
+	}
+}
+
 int main()
 {
 	int opcao=0; //Definindo a Variavel
@@ -167,8 +198,7 @@ int main()
 			break;
 			
 			case 4:
-			printf("Obrigado por uutilizar o sistema!\n");
-			return 0;
+			sair();
 			break;
 			
 			default:
